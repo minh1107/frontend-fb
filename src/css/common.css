@@ -1,0 +1,7 @@
+.shadow {
+    box-shadow: 0 0 0 1px #dddfe2;
+}
+
+.shadow__hover {
+    box-shadow: 0 1px 8px 5px #dddfe2;
+}

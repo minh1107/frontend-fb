@@ -1,0 +1,32 @@
+.home__navigate {
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeHgQ4P8m0fgSD1RVP4JpnQ2iXYVTRy2fzKJdhVNHLZ_MuQOd8xVPBCQJbiqkB_b2ehAt7eUL8u92nMye26aH8hD);
+    background-position-x: 0px;
+    background-size: auto;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.class {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.class::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+background: #888; 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+
+background: #555; 
+} 
