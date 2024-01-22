@@ -4,6 +4,8 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import "@/css/home.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store";
 type Props = {};
 
 const HomeNavigate = (props: Props) => {

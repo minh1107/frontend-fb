@@ -9,10 +9,11 @@ import AddIcon from '@mui/icons-material/Add';
 import { languages, linkLogin } from '@/constant/resource';
 import Login from './Login';
 import Register from './Register';
-type Props = {}
+type Props = {
+    auth: string
+}
 
-const Auth = (props: Props) => {
-    const [isLogin, setIsLogin] = useState(true)
+const Auth = ({auth}: Props) => {
   return (
     <div className='bg-login max-lg:overflow-scroll  text-black flex h-screen flex-col'>
         <div className='pt-[92px] pb-[132px] w-full flex justify-center max-lg:flex-col max-lg:items-center max-lg:py-10'>
@@ -47,8 +48,8 @@ const Auth = (props: Props) => {
                 </div>
             </div>
             <div className='w-[396px]'>
-                {isLogin && <Login isLogin={isLogin} setIsLogin={setIsLogin}/>}
-                {!isLogin && <Register isLogin={isLogin} setIsLogin={setIsLogin}/>}
+                {auth == 'login' && <Login />}
+                {auth == 'register' && <Register />}
                 <p className='mt-[28px] text-center'>
                     <b>Tạo Trang</b> dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp.
                 </p>

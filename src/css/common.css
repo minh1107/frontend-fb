@@ -5,3 +5,13 @@
 .shadow__hover {
     box-shadow: 0 1px 8px 5px #dddfe2;
 }
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+    padding: 0 !important;
+    background-color: #18191A;
+    border-radius: 6px;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: #18191A !important;
+}

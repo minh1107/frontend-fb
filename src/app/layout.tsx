@@ -5,6 +5,9 @@ import "@/css/main.css";
 import "@/css/common.css";
 import Header from "@/components/header/Header";
 import StoreProvider from "./StoreProvider";
+import Toast from "@/components/notifi/Toast";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor } from "@/lib/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StoreProvider>
-          <Header />
-          <div>{children}</div>
+          <Toast />
+          {children}
         </StoreProvider>
       </body>
     </html>

@@ -11,12 +11,12 @@ const HeaderNav = (props: Props) => {
     <div className='flex'>
       {
         homeLink.map((item, index) => (
-          <div key={index} className={`w-[130px] text-center flex  cursor-pointer my-auto
+          <Link href={item.link}  className={`w-[130px] text-center flex  cursor-pointer my-auto
           ${currentRoute != item.link ? 'hover:bg-[#7a818f73] hover:rounded-md h-[50px]' : 'h-[56px] border-b-[2px] border-blue'}`}>
-            <Link href={item.link} className='m-auto'>
-              <item.icon color={`${currentRoute==item.link ? 'primary' : 'inherit'}`} className='text-[30px]'/>
-            </Link>
-          </div>
+            <div key={index} className='m-auto' >
+                <item.icon color={`${currentRoute==item.link ? 'primary' : 'inherit'}`} className='text-[30px]'/>
+            </div>
+          </Link>
         ))
       }
     </div>

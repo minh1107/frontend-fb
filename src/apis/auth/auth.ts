@@ -12,5 +12,9 @@ export const apiLogin = (data: LoginType) => instance({
     url: '/auth/login',
     method: 'post',
     data,
-    withCredentials: true
+})
+
+export const apiLogout = (userId: number) => instance({
+    url: `/auth/logout/${userId}`,
+    method: 'get',
 })

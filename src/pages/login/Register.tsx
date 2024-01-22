@@ -3,6 +3,7 @@ import { apiLogin, apiRegister } from '@/apis/auth/auth'
 import ButtonCustom from '@/components/common/ButtonCustom'
 import InputCustom from '@/components/common/InputCustom'
 import { RegisterType } from '@/types/auth'
+import Link from 'next/link'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -11,7 +12,7 @@ type Props = {
     setIsLogin: any
 }
 
-const Register = ({isLogin, setIsLogin}: Props) => {
+const Register = () => {
 const {
     register,
     handleSubmit,
@@ -22,9 +23,6 @@ const {
         const res = await apiRegister(data)
         // console.log(res)
         console.log(process.env.NEXT_PUBLIC_SERVER_URL)
-    }
-    const handleChangeFormLogin = () => {
-        setIsLogin(true)
     }
     
   return (
@@ -47,8 +45,9 @@ const {
         {errors.rePassword && <span className='text-[14px] text-red-500 w-full ml-8 mt-[-10px]'>{errors.rePassword.ref?.name} is required</span>}
         
         <ButtonCustom type={'submit'} color='primary' className='w-[364px] bg-blue mt-2' text="Đăng Ký"/> 
-        
-        <ButtonCustom handleClick={handleChangeFormLogin} color='primary' className=' bg-green-700 mt-2' text="Đăng nhập"/> 
+        <Link href={'/login'}>
+        <ButtonCustom color='primary' className=' bg-green-700 mt-2' text="Đăng nhập"/>
+        </Link> 
     </form>
   )
 }
